@@ -9,6 +9,7 @@ import { fileURLToPath } from "url"
 import { createRequire } from "module"
 // node 中的命令函数参数通过process 来获取 process.argv
 const args = minimist(process.argv.slice(2))
+//esm使用commonjs变量
 const __filename = fileURLToPath(import.meta.url); // 获取文件的绝对路径 file: -> /usr
 const __dirname = dirname(__filename)
 const require = createRequire(import.meta.url)
@@ -23,3 +24,4 @@ console.log(target, format)
 //入口文件 根据命令行提供的路径进行解析
 const entry = resolve(__dirname, `../packages/${target}/src/index.ts`)
 
+//根据需要进行打包
