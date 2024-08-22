@@ -11,5 +11,8 @@
       "cjs",
       "gloabl"
     ]
+  },
+  "dependencies": {
+    "@vue/shared": "workspace:*"
   }
 }
